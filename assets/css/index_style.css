@@ -1,0 +1,230 @@
+
+body {
+    background: #ffeee5;
+    font-size: 16px;
+    line-height: 1.66em;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    color:#000;
+    box-shadow: none;
+    
+}
+
+/*-------------------------------------------------------*/
+
+#to-top{
+	display: block;
+    background: #ff5a00;
+    color: #efe8e8;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+    text-decoration:none;
+}
+
+/*-------------------------------------------------------*/
+
+input,textarea:focus
+ {
+  box-shadow: none !important;
+ }
+
+ #heading{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  }
+
+/*--------------------------------------------------*/
+.navbar-toggler{
+  width: 47px;
+  height: 34px;
+  background-color: transparent;
+  border:none;
+}
+.navbar-toggler .line{
+  width: 100%;
+  float: left;
+  height: 2px;
+  background-color: #FFF;
+  margin-bottom: 5px;
+}
+
+.navbar-expand-lg{
+  background-color: #ff5a00;
+  color: #FFF;
+}
+
+/*--------------------------------------------------*/
+
+
+#reg .register
+{
+    margin-top: 90px;
+    margin-bottom: 80px;
+}
+
+#reg .form-control
+{
+    box-shadow: none;
+    
+}
+
+#reg button
+{
+  font-size: large !important;
+  background-color:  #ff5a00 !important;
+  color: #FFF !important;
+  padding: 10px ;
+  border-radius: 5px !important;
+
+}
+
+
+/*--------------------------------------------------*/
+h2
+{
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff5a00;
+}
+/*------------------------------------------------*/
+/*---------------------for login page---------------------------*/
+.ask
+{
+  color: #000;
+}
+.ask a
+{
+  color: #ff5a00;
+  font-weight: 600;
+  font-size: 16px;
+}
+/*------------------------------------------------*/
+/*-----------------------nav-------------------------*/
+nav
+{
+
+  font-weight: 600;
+  /* background-color: #FFF; */
+  color: #FFF;
+}
+nav a
+{
+  color: #FFF !important;
+}
+.search,.logout
+{
+  background-color:  #ff5a00 !important;
+  color: #FFF !important; 
+  
+
+}
+
+/*----------------blog---------------------------*/
+#blog , #profile
+{
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+#blog h4 ,h5
+{
+  font-weight: 600;
+  color: #ff5a00;
+  
+}
+#blog h5
+{
+  font-size: 14px;
+}
+#blog .mainImg
+{
+  height: 80%;
+  width: 80% !important;
+ border-radius: 10%;
+}
+#blog button
+{
+  font-size: large !important;
+  background-color:  #ff5a00 !important;
+  color: #FFF !important;
+  padding: 10px;
+  border-radius: 5px !important;
+
+}
+/*------------------------------------------------*/
+
+element.style {
+}
+.mb-5, .my-5 {
+    margin-bottom: 3rem!important;
+}
+.card {
+  border-radius: 20px;
+  /* background-color: black; */
+}
+/*--------------------profile---------------------*/
+#profile .profileImg
+{
+  width: 15%;
+  height: 15%;
+}
+
+#profile span
+{
+  font-size: small;
+  color: #000;
+}
+#profile .content p
+{
+  display: inline;
+  font-size: medium;
+  color: #ff5a00;
+  font-weight: 700;
+  font-size: 17px;
+  margin-right: 10px;
+}
+#profile h4
+{
+ font-weight: 700;
+ color: #ff5a00;
+}
+#profile button
+{
+ font-size: 15px; 
+  color: #FFF !important;
+  border-radius: 5px !important;
+}
+
+/*---------------------------------------------------------*/
+
+#plusBtn
+{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    background-color: #FFF;
+    
+}
+/*---------------------------------------------------------*/
+
+@media (max-width :991px)
+{ 
+  body
+    {
+      font-size: 12px !important;
+      
+    }  
+   
+}
+/*--------------------------------------------------*/

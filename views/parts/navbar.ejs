@@ -1,0 +1,43 @@
+ <nav class="navbar navbar-expand-lg ">
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar-togglerDemo02"
+        aria-controls="navbar-togglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line" style="margin-bottom: 0;"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-togglerDemo02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/posts">Blogs</a>
+          </li>
+
+          <% if(isLogged){%>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">Profile</a>
+            </li>
+          <% } %>  
+    
+            <li class="nav-item">
+                <a class="nav-link" href="/following">What Followers Say!</a>
+            </li>
+            <% if(!isLogged){%>
+              <form  class="m-2" action="/auth/register" method="GET">
+                <input type="submit" value="Register" class="btn logout ml-5">
+              </form>
+            <% }%>
+
+            <% if(!isLogged){%>
+              <form  class="m-2" action="/auth/login" method="GET">
+                <input type="submit" value="Login" class="btn logout ">
+              </form>
+            <% }%>
+        </ul>
+
+        <% if(isLogged){%>
+          <form  class="m-2" action="/auth/logout" method="POST">
+            <input type="submit" value="logout" class="btn logout">
+          </form>
+        <% }%>
+    </div>
+</nav>

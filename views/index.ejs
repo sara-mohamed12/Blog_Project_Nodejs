@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<%- include('parts/header') %>
+
+<%- include('parts/navbar') %>
+<section id="blog" class="py-5">
+    <div class="container ">
+      <% posts.forEach(post =>{ %>
+        <div class="card mb-5 w-75">
+            <div class="row no-gutters">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="<%= post.photo%>" class="card-img img-fluid mainImg" alt="blog image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body mx-2 ">
+                        <h4 class="card-title text-center"><%= post.title %></h4>
+                        <p class="card-text"><%= post.content %></p>
+                        <div class="row  m-2 py-2 ">
+                            <div class=" col-2 ">
+                                <img src="images/profile.png" class="card-img img-fluid h-100" alt="blog image">
+                            </div>
+                            <div class=" col-10 mt-2 ">
+                                <h5>by <%= post.author.firstname + " "+ post.author.lastname %></h5>
+                                <p class="text-muted"><%= post.createdAt %></p>
+                            </div>
+                        </div>
+                        <% if(!post.author._id.equals(isLogged)){%>
+                            <form action="/auth/follow<%=post.author._id%>?_method=PUT" method="POST" class="text-center mt-3">
+                                <%if(post.author.follow){ %>
+                                    <button class="btn  btn-outline btn-lg rounded-0 changeBtn " type="submit">Follow</button>
+                                <%} else{%>
+                                    <button class="btn  btn-outline btn-lg rounded-0 changeBtn " type="submit">UnFollow</button>
+                                <% } %>  
+                            </form>  
+                        <%} %>  
+                    </div>
+                </div>
+            </div>
+        </div>
+      <%})%>
+    </div>
+</section> 
+
+<% if(isLogged){%>
+    <div><a id='to-top' href="/posts/new">+</a></div>
+<% } %>
+    
+<%- include('parts/footer') %>
+
+
